@@ -3,7 +3,7 @@ const router = express.Router();
 const fetchPokemonById = require('../controllers/pokemonController.js');
 
 
-router.get('/api/pokemon/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
     try {
         const pokemonId = req.params.id;
         const pokemonData = await fetchPokemonById(pokemonId);
